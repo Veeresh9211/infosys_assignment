@@ -1,0 +1,18 @@
+.caseList{
+    margin: 1% 5%;
+    td {
+        cursor: pointer !important;
+    }
+    .table tbody tr:hover td, .table-hover tbody tr:hover th {
+        background-color: lightblue;
+      }
+    .searchContainer {
+        float: right;
+        margin-right: 12%;
+        margin-bottom: 1%;
+        .form-control {
+            width: 180% !important;
+        }
+    }
+}
+
