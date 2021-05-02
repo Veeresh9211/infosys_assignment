@@ -1,5 +1,8 @@
 import './App.scss';
+<<<<<<< HEAD
 import React,{useState, useEffect} from 'react';
+=======
+>>>>>>> 9e85ae464b150797183d5bad4b6959ba940bfcde
 import Home from './components/home/home';
 import CaseList from './components/casesList/casesList';
 import TestList from './components/testList/testList';
