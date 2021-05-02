@@ -8,7 +8,11 @@ import {createStore, applyMiddleware} from 'redux';
 import {Provider} from 'react-redux';
 import thunk from 'redux-thunk';
 import mainReducer from './store/reducers/mainReducer';
-
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.js';
+import $ from 'jquery';
+import Popper from 'popper.js';
 const store = createStore(mainReducer, applyMiddleware(thunk));
 
 ReactDOM.render(
