@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import React,{useState, useEffect} from 'react';
+import Home from './components/home/home';
+import CaseList from './components/casesList/casesList';
+import TestList from './components/testList/testList';
+import EachCase from './components/eachCase/eachCase';
+import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import Header from './components/header/header';
+import Settings from './components/settings/settings';
+import {connect} from 'react-redux';
+import {ThemeProvider} from "styled-components";
+import { GlobalStyles } from "./components/globalStyles";
+import { lightTheme, darkTheme } from "./components/Theme";
 
-function App() {
+function App({themeL}) {
+  const [theme, setTheme] = useState('light');
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={themeL === false ? lightTheme : darkTheme}>
+      <GlobalStyles/>
+      {themeL}
+      <BrowserRouter>
+      <Header/>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route path="/caseList" component={CaseList}></Route>
+          <Route path="/testList" component={TestList}></Route>
+          <Route path="/detailsView" component={EachCase}></Route>
+          <Route path="/settings" component={Settings}></Route>
+        </Switch>
+      </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
-export default App;
+const mapStateToProps = (state) =>{
+  debugger
+  return{
+    themeL: state.themme.theme
+  }
+}
+export default connect(mapStateToProps)(App);
