@@ -3,12 +3,16 @@ import {connect} from 'react-redux';
 import {GetCaseLists, SearchStateTests} from '../../store/actions/caseAction';
 import './casesList.scss';
 import { useHistory } from "react-router-dom";
+import { useTranslation} from 'react-i18next';
+
 
 const CaseList = ({caseList, GetCaseLists, SearchStateTests})=>{
     let history = useHistory();
     useEffect(()=>{
         GetCaseLists();
     },[]);
+
+    const { t, i18n } = useTranslation();
 
     const searchStateCases = (e)=>{
         SearchStateTests(e.currentTarget.value);
@@ -42,20 +46,20 @@ const CaseList = ({caseList, GetCaseLists, SearchStateTests})=>{
     return(
         <div className="caseList ">
             <h4>
-                List Of Cases State Wise
+            {t('casesListHeader')}
             </h4>
             <div className="searchContainer">
-                <input type="text" class="form-control" id="stateSearch" onChange={(e)=>searchStateCases(e)} placeholder="Search by State.."/>
+                <input type="text" class="form-control" id="stateSearch" onChange={(e)=>searchStateCases(e)} placeholder={t('searchPlaceHolder')}/>
             </div>
             <div className="table-responsive">
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                    <th scope="col">State Name</th>
-                    <th scope="col">Active Cases</th>
-                    <th scope="col">Confirmed Cases</th>
-                    <th scope="col">Deceased Cases</th>
-                    <th scope="col">Recovered Cases</th>
+                    <th scope="col">{t('stateName')}</th>
+                    <th scope="col">{t('activeC')}</th>
+                    <th scope="col">{t('confirmedC')}</th>
+                    <th scope="col">{t('deceasedC')}</th>
+                    <th scope="col">{t('recoveredC')}</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -4,10 +4,11 @@ import {GetCaseLists} from '../../store/actions/caseAction';
 import {GetTestLists} from '../../store/actions/testAction';
 import {connect} from 'react-redux';
 import { useHistory } from "react-router-dom";
+import { useTranslation} from 'react-i18next';
 
 const Home = ({GetCaseLists, GetTestLists})=>{
     let history = useHistory();
-  
+    const { t, i18n } = useTranslation();
     const getCaseList =()=>{
         GetCaseLists();
         history.push("/caseList");
@@ -21,10 +22,10 @@ const Home = ({GetCaseLists, GetTestLists})=>{
     return(
         <div className="row home">
             <div className="col-md-5 cases" onClick={getCaseList}>
-                Cases
+                {t('cases')}
             </div>
             <div className="col-md-5 testing" onClick={getTestList}>
-                Testing
+                {t('testing')}
             </div>
         </div>
     )

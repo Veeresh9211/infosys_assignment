@@ -1,5 +1,5 @@
 import './App.scss';
-import React,{useState, useEffect} from 'react';
+import React,{useState, Suspense} from 'react';
 import Home from './components/home/home';
 import CaseList from './components/casesList/casesList';
 import TestList from './components/testList/testList';
@@ -11,10 +11,18 @@ import {connect} from 'react-redux';
 import {ThemeProvider} from "styled-components";
 import { GlobalStyles } from "./components/globalStyles";
 import { lightTheme, darkTheme } from "./components/Theme";
+import { useTranslation} from 'react-i18next';
+
+const Loader = () => (
+  <div>loading...</div>
+);
 
 function App({themeL}) {
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('');
+  const { t, i18n } = useTranslation();
+  debugger
   return (
+    <Suspense fallback={<Loader />}>
     <ThemeProvider theme={themeL === false ? lightTheme : darkTheme}>
       <GlobalStyles/>
       {themeL}
@@ -29,6 +37,7 @@ function App({themeL}) {
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
+    </Suspense>
   );
 }
 

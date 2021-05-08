@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import './eachCase.scss';
+import { useTranslation} from 'react-i18next';
 
 const EachCase = (props)=>{
     const [eachdetail, setEachDetail] =useState(null);
     const [stateName, setStateName] =useState(null);
+    const { t, i18n } = useTranslation();
     useEffect(()=>{
         let finalDetails = [];
         Object.keys(props.history.location.state.detail.districtDetails).forEach((eachS)=>{
@@ -33,7 +35,7 @@ const EachCase = (props)=>{
 
     return(
         <div className="eachState">
-            <p>State Name is <b>{stateName}</b></p>
+            <p>{t('stateNameHeader')} <b>{stateName}</b></p>
             <div className="table-responsive">
                 <table class="table">
                 <thead class="thead-dark">

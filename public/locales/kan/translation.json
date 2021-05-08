@@ -1,0 +1,19 @@
+{
+  "home":"ಮನೆ",
+  "settings":"ಸಂಯೋಜನೆಗಳು",
+  "cases":"ಕೋವಿಡ್ ಪ್ರಕರಣಗಳು",
+  "testing":"ಕೋವಿಡ್ ಪರೀಕ್ಷೆ",
+  "casesListHeader":"ಪ್ರತಿ ರಾಜ್ಯದ ಪ್ರಕರಣಗಳ ಪಟ್ಟಿ",
+  "searchPlaceHolder":"ರಾಜ್ಯ ಹೆಸರಿನಿಂದ ಹುಡುಕಿ",
+  "stateName":"ರಾಜ್ಯದ ಹೆಸರು",
+  "activeC":"ಸಕ್ರಿಯ ಪ್ರಕರಣಗಳು",
+  "confirmedC":"ದೃಢಪಟ್ಟಿರುವ ಪ್ರಕರಣಗಳು",
+  "deceasedC":"ಕ್ಷೀಣಿಸಿದ ಪ್ರಕರಣಗಳು",
+  "recoveredC":"ಆರೋಗ್ಯಕರ ಪ್ರಕರಣಗಳು",
+  "stateNameHeader": "ರಾಜ್ಯದ ಹೆಸರು",
+  "totalTested":"ಒಟ್ಟು ಪರೀಕ್ಷಿಸಲಾಗಿದೆ",
+  "unconfirmed":"ದೃ ೀಕರಿಸಲಾಗಿಲ್ಲ",
+  "updatedDate":"ನವೀಕರಿಸಿದ ದಿನಾಂಕ",
+  "changeLanguage":"ಭಾಷೆ ಬದಲಾಯಿಸಿ"
+  
+}

@@ -1,11 +1,11 @@
 import React, {useEffect} from 'react';
 import {connect} from 'react-redux';
 import {GetTestLists} from '../../store/actions/testAction';
-
+import { useTranslation} from 'react-i18next';
 import './testList.scss';
 
 const TestList = ({testList, GetTestLists})=>{
-
+    const { t, i18n } = useTranslation();
     useEffect(()=>{
         GetTestLists();
     },[]);
@@ -33,10 +33,10 @@ const TestList = ({testList, GetTestLists})=>{
             <table class="table">
                 <thead class="thead-dark">
                     <tr>
-                    <th scope="col">State</th>
-                    <th scope="col">Total Tested</th>
-                    <th scope="col">Unconfirmed</th>
-                    <th scope="col">Updated Date</th>
+                    <th scope="col">{t('stateNameHeader')}</th>
+                    <th scope="col">{t('totalTested')}</th>
+                    <th scope="col">{t('unconfirmed')}</th>
+                    <th scope="col">{t('updatedDate')}</th>
                     </tr>
                 </thead>
                 <tbody>

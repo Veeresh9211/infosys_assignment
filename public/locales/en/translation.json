@@ -1,0 +1,18 @@
+{
+  "home":"Home",
+  "settings":"Settings",
+  "cases":"Cases",
+  "testing":"Testing",
+  "casesListHeader":"List Of Cases State Wise",
+  "searchPlaceHolder":"Search by state",
+  "stateName":"State Name",
+  "activeC":"Active Cases",
+  "confirmedC":"Confirmed Cases",
+  "deceasedC":"Deceased Cases",
+  "recoveredC":"Recovered Cases",
+  "stateNameHeader": "State Name is",
+  "totalTested":"Total Tested",
+  "unconfirmed":"Unconfirmed",
+  "updatedDate":"Updated Date",
+  "changeLanguage":"Change Language"
+}

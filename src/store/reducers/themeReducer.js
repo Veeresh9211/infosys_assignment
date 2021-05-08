@@ -1,5 +1,5 @@
 const intitalState={
-    theme: true
+    theme: false
  }
  
  const ThemeReducer = (state=intitalState, action) =>{
